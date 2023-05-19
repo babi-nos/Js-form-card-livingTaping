@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    min-height: 620px;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0px;
+    top: 0px;
+    background-image: url(/images//bg-main-desktop.png);
+    background-size: cover;
+}
+
+/* CARD RECTO */
+
+.cardRecto {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 440px;
+    height: 240px;
+    border-radius: 20px;
+    background-image: url(/images/bg-card-front.png);
+    z-index: 9;
+    display: grid;
+    grid-template-rows: 50% 25% 25%;
+    color: white;
+}
+
+svg {
+    position: relative;
+    top: 25%;
+    left: 5%;
+}
+
+.numberCard {
+    position: relative;
+    left: 5%;
+    top: 15%;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+}
+
+.infos {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 25%;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.name {
+    position: relative;
+    left: 5%;
+}
+
+.dateExp {
+    position: relative;
+    right: 10%;
+}
+
+
+/* CARD VERSO */
+.cardVerso {
+    position: absolute;
+    left: 35%;
+    top: 55%;
+    width: 440px;
+    height: 240px;
+    border-radius: 20px;
+    background-image: url(/images/bg-card-back.png);
+    z-index: 9;
+}
+
+.cvc {
+    position: relative;
+    text-align: right;
+    top: 45%;
+    right: 11%;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* FORM */
+
+.formulaire {
+    position: relative;
+    height: 100%;
+}
+
+#form {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    /* height: 50%; */
+    display: grid;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+.nameOfcard {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardNumber {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 20px 0;
+}
+
+/* .date label {
+    /* padding: 10px 0;
+} */
+
+/* .month {} */
+
+label {
+    padding: 5px 0;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+input {
+    padding: 13px 0;
+    margin: 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /* Ajoutez les styles supplémentaires si nécessaire */
+}
+
+/* input[type="number"] {
+    -moz-appearance: textfield;
+    /* Ajoutez les styles supplémentaires si nécessaire 
+} */
+
+button {
+    padding: 20px;
+    margin: 0 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* flex-grow: 1; */

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="cardRecto">
+      <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+        <path
+          d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+          stroke="#fff" />
+      </svg>
+      <h1 class="numberCard">0460 4648 4958 5648</h1>
+      <div class="infos">
+        <p class="name">Albert dupontel</p>
+        <p class="dateExp"> <span class="dateMonth"></span> <span class="years">09</span> </p>
+      </div>
+    </div>
+    <div class="cardVerso">
+      <p class="cvc">000</p>
+
+    </div>
+  </div>
+
+
+  <div class="formulaire">
+
+    <form id="form" action="">
+      <div class="nameOfcard">
+
+        <label for="cardholder-name">Nom du titulaire de la carte :</label>
+        <input type="text" minlength="4" maxlength="30" id="cardholdeName" name="cardholder-name"
+          placeholder=" Nom du titulaire de la carte" required>
+      </div>
+
+      <div class="cardNumber">
+
+        <label for="card-number">Numéro de carte :</label>
+        <input type="number" maxlength="14" id="card-number" name="card-number" placeholder="Numéro de carte" required>
+
+      </div>
+
+      <div class="date">
+
+        <div class="month">
+
+          <label for="expiry-month">Mois d'expiration :</label>
+          <input type="number"  id="expiry-month" name="expiry-month" placeholder=" MM" required>
+
+        </div>
+
+        <div class="year">
+
+          <label for="expiry-year">Année d'expiration :</label>
+          <input type="text" id="expiry-year" name="expiry-year" placeholder=" AA" required>
+        </div>
+
+        <div class="cvcCard">
+
+          <label for="cvc">Code CVC :</label>
+          <input type="text" id="cvc" name="cvc" placeholder=" CVC" required>
+
+        </div>
+
+      </div>
+      <button type="submit">Confirm</button>
+    </form>
+
+  </div>
+
+  <!-- 0000 0000 0000 0000
+    Jane Appleseed
+    00/00
+    
+    000
+    
+    Cardholder Name
+    e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+  Completed state start
+
+  Thank you!
+  We've added your card details
+  Continue 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="index.js"></script>
+</body>
+
+</html>

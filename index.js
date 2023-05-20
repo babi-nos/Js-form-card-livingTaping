@@ -58,6 +58,7 @@ const liveTapinginput = function (e) {
   }
 };
 
+
 inputName.addEventListener("click", liveTapinginput);
 inputCArd.addEventListener("click", liveTapinginput);
 inputMonth.addEventListener("click", liveTapinginput);

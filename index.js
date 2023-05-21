@@ -10,6 +10,8 @@ const dateMonth = document.querySelector(".dateMonth");
 const dateYear = document.querySelector(".years");
 const cvcCard = document.querySelector(".cvc");
 
+const maxLength = 15;
+
 const liveTapinginput = function (e) {
   const liveId = e.target.id;
   let living = document.getElementById(liveId);
@@ -22,7 +24,7 @@ const liveTapinginput = function (e) {
     living.addEventListener("input", (e) => {
       const livetaping = e.target.value;
       let formattedValue = livetaping.replace(/\s/g, "");
-      let displayValue = "";
+      let displayValue = "".slice(0, 4);
 
       for (let i = 0; i < formattedValue.length; i++) {
         if (i > 0 && i % 4 === 0) {
@@ -32,32 +34,31 @@ const liveTapinginput = function (e) {
       }
       numberCard.textContent = displayValue;
 
-      if ((livetaping.length = 15)) {
-        living.value = living.value.slice(0, 15);
+      console.log(displayValue.length);
+      if (livetaping.length = maxLength) {
+        living.value = living.value.slice(0, maxLength );
       }
     });
   } else if (liveId === "expiry-month") {
     living.addEventListener("input", (e) => {
       const livetaping = e.target.value;
-      dateMonth.textContent = ` ${livetaping} / `;
-      if ((livetaping.length = 2)) {
-        console.log(livetaping.length);
-        living.value = living.value.slice(0, 2);
-      }
+      dateMonth.textContent = ` ${livetaping} `.slice(0, 3);
+      living.value = living.value.slice(0, 2);
     });
   } else if (liveId === "expiry-year") {
     living.addEventListener("input", (e) => {
       const livetaping = e.target.value;
-      dateYear.textContent = `${livetaping}`;
+      dateYear.textContent = `${livetaping}`.slice(0, 2);
+      living.value = living.value.slice(0, 2);
     });
   } else {
     living.addEventListener("input", (e) => {
       const livetaping = e.target.value;
-      cvcCard.textContent = `${livetaping}`;
+      cvcCard.textContent = `${livetaping}`.slice(0, 3);
+      living.value = living.value.slice(0, 3);
     });
   }
 };
-
 
 inputName.addEventListener("click", liveTapinginput);
 inputCArd.addEventListener("click", liveTapinginput);
